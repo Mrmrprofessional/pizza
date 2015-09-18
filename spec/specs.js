@@ -6,8 +6,8 @@ describe('PizzaOrder', function() {
         expect(testOrder.size).to.equal("l");
     });
 
-    it("calculates a movie price based on user selection", function() {
-        var testTicket = new Ticket(2,3,4);
-        expect(testTicket.ticketPrice()).to.equal(9);
+    it("calculates the price of a pizza order", function() {
+        var testOrder = new PizzaOrder(5, ["pepperoin", "mushrooms", "olives"], "l");
+        expect(testOrder.orderPrice()).to.equal(9);
     })
 });
