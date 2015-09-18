@@ -8,6 +8,6 @@ describe('PizzaOrder', function() {
 
     it("calculates the price of a pizza order", function() {
         var testOrder = new PizzaOrder(2, ["pepperoin", "mushrooms", "olives", "ham"], 20);
-        expect(testOrder.orderPrice()).to.equal(44);
+        expect(testOrder.orderPrice()).to.equal(48);
     })
 });

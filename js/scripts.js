@@ -6,31 +6,34 @@ function PizzaOrder(quantinty, toppings, size) {
 
 PizzaOrder.prototype.orderPrice = function () {
 
-    return this.quantinty * ((this.toppings.length * .5) + this.size);
+    return this.quantinty * ((this.toppings.length) + this.size);
 }
 
 $(document).ready(function() {
-    event.preventDefault();
-    $("form#new-ticket").submit(function(event) {
+    $("form#new-order").submit(function(event) {
         event.preventDefault();
 
-        var inputTitle = parseInt($("select.new-movieTitle").val());
-        var inputTime = parseInt($("select.new-movieTime").val());
-        var inputAge = parseInt($("select.new-userAge").val());
+        var inputQuantity = parseInt($("input#quantity").val());
+        console.log($("input#quantity").val());
+        var inputToppings = [];
+        if($("input#pepperoni").is(':checked')){
+            inputToppings.push($("input#pepperoni").val());
+        }
+        if($("input#garlic").is(':checked')){
+            inputToppings.push($("input#garlic").val());
+        }
+        if($("input#mushrooms").is(':checked')){
+            inputToppings.push($("input#mushrooms").val());
+        }
+        if($("input#olives").is(':checked')){
+            inputToppings.push($("input#olives").val());
+        }
+        var inputSize = parseInt($("select#size").val());
+        var newOrder = new PizzaOrder(inputQuantity, inputToppings, inputSize);
 
-        var newTicket = new Ticket(inputTitle, inputTime, inputAge);
-
-        $("#price h2").text("Ticket Price: " + "$" + newTicket.ticketPrice() + ".00");
-        console.log(newTicket.ticketPrice);
+        $("#price h2").text("Order Price: " + "$" + newOrder.orderPrice() + ".00");
 
         $("#price").show();
     });
 
-    $("option#meru").click(function(){
-        $("#poster h2").text("what up");
-
-        $("#poster").append('<img src="http://t0.gstatic.com/images?q=tbn:ANd9GcTUyhL5rNv0LOhoGEVHyqvHb_MQZxKLbi7jvPUV6gKz3g_aHPzj" />');
-    });
-
-    $("#poster").show();
 });
