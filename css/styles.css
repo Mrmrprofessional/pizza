@@ -1,0 +1,47 @@
+#price {
+    display: none;
+}
+
+#poster {
+    display: none;
+}
+
+/*.contact {
+    cursor: pointer;
+    color: #0088cc;
+}
+
+.contact:hover {
+    text-decoration: underline;
+}*/
+
+/*.btn {
+    cursor:wait;
+}*/
+
+h1 {
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+    font-size: 50px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    color: red;
+    line-height: 17.6px;
+    text-align: center;
+}
+
+h2 {
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 17.6px;
+}
+
+.row {
+  margin: 50px;
+  border: 2px solid green;
+  padding: 1em;
+  background-color: #FFFFF2;
+}
