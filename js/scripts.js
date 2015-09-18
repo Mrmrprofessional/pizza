@@ -1,7 +1,7 @@
-function Ticket(movieTitle, movieTime, userAge) {
-    this.movieTitle = movieTitle;
-    this.movieTime = movieTime;
-    this.userAge = userAge;
+function PizzaOrder(quantinty, toppings, size) {
+    this.quantinty = quantinty;
+    this.toppings = toppings;
+    this.size = size;
 }
 
 Ticket.prototype.ticketPrice = function () {
