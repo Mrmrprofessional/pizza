@@ -7,7 +7,7 @@ describe('PizzaOrder', function() {
     });
 
     it("calculates the price of a pizza order", function() {
-        var testOrder = new PizzaOrder(5, ["pepperoin", "mushrooms", "olives"], "l");
-        expect(testOrder.orderPrice()).to.equal(9);
+        var testOrder = new PizzaOrder(2, ["pepperoin", "mushrooms", "olives", "ham"], 20);
+        expect(testOrder.orderPrice()).to.equal(44);
     })
 });

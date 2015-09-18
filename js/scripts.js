@@ -4,8 +4,9 @@ function PizzaOrder(quantinty, toppings, size) {
     this.size = size;
 }
 
-Ticket.prototype.ticketPrice = function () {
-    return this.movieTitle + this.movieTime + this.userAge;
+PizzaOrder.prototype.orderPrice = function () {
+
+    return this.quantinty * ((this.toppings.length * .5) + this.size);
 }
 
 $(document).ready(function() {
